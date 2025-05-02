@@ -1,0 +1,274 @@
+@charset "utf-8";
+section{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+
+}
+.video-wrap{
+    width:100%;
+    height:100%;
+    }
+video{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.text-object{
+    position:absolute;
+    width:100%;
+    height: 100%;           
+    top:0;
+    left:0;
+    z-index:99;
+    color:rgba(0, 0, 0, 0.534);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:2.3em;
+}
+.text-object h2,
+.text-object p{
+    margin:0;
+}
+
+.curtain{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background-color:black;
+    z-index:99999;
+    /* 애니메이션 키프레임이름을 호출 */
+    animation-name:move;
+    /* 애니메이션 시간 */
+    animation-duration:1s;
+    /* 애니메이션의 이전 장면을 보여주고 실행하도록 시간 대기 */
+    animation-delay:0.3s;
+    /* 애니메이션의 탄성(빠르게 진행되가 천천히, 
+        천천히 진행되다고 빠르게, 일정한 속도
+    */
+    animation-timing-function:ease-in;
+    /* 마지막 장면이 끝나면 멈춰있게 할 것인지(기본적으로 다시 첫장면으로 돌아간다 */
+    animation-fill-mode:forwards; 
+    /* 마지막 장면에서 멈춤 */
+}
+
+@keyframes move{
+    /*     애니메이션 장면의 이름 */
+    100%{
+       transform:translateX(100%) 
+    }
+}
+.s-img{
+    width:50%;
+    height:80%;
+    overflow:hidden;
+    margin: auto;
+}
+.s-img img{
+    height:100%;
+}
+.s-text{
+    width:60%;
+    height:80%;
+    background-color:rgba(128, 128, 128, 0.479);
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding:0 0 0 15% ;
+    margin:5px 0;
+}
+.s-text h2{
+    font-size:3.5em;
+    text-shadow: 5px 5px 5px rgba(143, 143, 143, 0.5);
+    transform:translateY(50px);
+    opacity: 0;
+    transition:0.5s;
+    transition-delay:0.3s;
+}
+.s-text h2.active{
+    transform:translateY(0);
+    opacity: 1;
+}
+
+.s-text p{
+    transform:translateY(50px);
+    font-size:1.8em;
+    font-weight: 600;
+    opacity: 0;
+    transition:0.5s;
+    transition-delay:0.5s;
+}
+section:nth-child(3) .s-text,
+section:nth-child(5) .s-text{
+    background-color: rgba(192, 174, 140, 0.596);
+    }
+ section:nth-child(5) .s-text{
+    padding:0 0 0 20% ;
+    }
+
+.s-text p.active{
+    transform:translateY(0);
+    opacity: 1;
+}
+
+.d-link{
+    width:200px;
+    padding:10px;
+    font-size: 1em;
+    border:2px solid rgb(252, 252, 252); 
+    border-radius:30px;
+    text-align:center;
+    color:white;
+    margin-top:50px;
+    transform:translateY(50px);
+    opacity: 0;
+    transition:0.5s;
+    transition-delay:0.7s;
+}
+
+.d-link.active{
+    transform:translateY(0);
+    opacity: 1;
+}
+.index-footer{
+    width:100%;
+    height: 80%;
+    padding:10%;
+    margin: auto;
+    margin-top: 100px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+    background-color:  rgba(192, 174, 140, 0.596);
+
+}
+.index-footer h2{
+    font-size:5vw;
+    margin:auto;
+    color: white;
+    margin-bottom: 5%;
+    text-shadow: 5px 5px 5px rgba(145, 129, 99, 0.842);
+}
+index-footer p{
+    text-align:center;
+    font-size:1.5em;
+    font-weight: 600;
+    color: white;
+    line-height: 30%;
+
+}
+
+@media screen and (max-width:1350px){
+    .s-text h2{
+        font-size:3em;
+    }
+    .s-text p{
+        font-size:1.35em;
+    }
+    .d-link{
+        font-size: 0.9em;
+
+}
+}
+    
+@media screen and (max-width:1024px){
+    .s-img{
+        width:100%;
+        padding:0;
+        margin: 0;
+    }
+    .s-img img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .s-text{
+        width:100%;
+        background-color: transparent;
+        position:absolute;
+        left:0;
+        top:0;
+        align-items: center;
+    }
+    section:nth-child(3) .s-text,
+    section:nth-child(5) .s-text{
+    background-color: transparent;
+
+}
+    .s-text h2{
+        transition-delay:0s;
+    }
+    .s-text p{
+        transition-delay:0.2s;
+    }
+    .d-link{
+        transition-delay:0.4s;
+    }
+.index-footer h2{
+    margin:0;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+}
+@media screen and (max-width: 768px) {
+    section:first-of-type {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: block; /* flex 제거 */
+      overflow: hidden;
+    }
+  
+    .video-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  
+    .text-object {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      font-size: 1.5em;
+    }
+  
+    .text-object h2,
+    .text-object p {
+      margin: 0;
+    }
+  }
+  
+  
+  
+
+
