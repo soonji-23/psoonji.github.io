@@ -1,0 +1,388 @@
+@charset "utf=8";
+
+hr{
+   border-color: rgba(243, 242, 242, 0.555); 
+}
+
+.login-title{
+    font-size: 3em;
+    margin-top: 200px;
+    margin-bottom: 120px;
+    text-align: center;
+    /* color:rgb(85, 84, 84); */
+}
+.login-wrap{
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+.log-member {
+    width: 60%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    }
+    .log-member a{
+        width: 35%;
+        height: 60px;
+        font-size: 1.1em;
+        font-weight: 700;
+        background-color:white;
+        border:1px solid black;
+        color:rgb(112, 112, 112);
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+    .log-member a:hover,
+    .log-member a.active{
+        background-color:black;
+        color:white;
+     }
+
+.login-form{
+    width: 42%;
+    margin: auto;
+    height: auto;
+    margin-bottom: 250px;
+    display:none;
+}
+#member{
+    display:block;
+}
+
+.id,
+.pass,
+.name,.book,
+.phone{
+    width: 100%;
+    height: 60px;
+    margin: 15px 0;
+}
+input[name=id],
+input[name=psw],
+input[name=name],input[name=book],
+input[name=tel]{
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(122, 122, 122, 0.76);
+    padding: 10px;
+    padding-left: 30px;
+    align-items: center;
+    font-size:1.1em;
+    outline: none;
+}
+.check{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+input[id=chk]+label{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+    
+} 
+input[id=chk]:checked+label{
+    background: url(../images/icheck4.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+   
+} 
+input[id=chk]{
+    display: none;
+}
+.login-bt,.book-bt{
+    width: 100%;
+    margin: 10px 0;
+}
+input[name=login-bt],input[name=book-bt]{
+    width: 100%;
+    height: 60px;
+    background-color:black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.bt-group{
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+    margin-bottom: 50px;
+}
+.bt-group a{
+    padding: 0 20px;
+}
+.login-form button{
+margin: 10px auto;
+margin-left: 10px;
+margin-right: 20px;
+width:28%;
+height: 40px;
+overflow: hidden;
+text-indent: -999px;
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+}
+ 
+.naver{
+    background: #03c75a url(../images/naver.png);
+}
+.kakao{
+    background:#fee500 url(../images/kakao.png);
+}
+.face{
+    background: #3c66c4 url(../images/facebook.png);
+}
+.p-info{
+    color:darkgray
+}
+@media screen and (max-width:1920px) {
+    .login-form button{
+        width: 100%;
+        height: 60px;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width:1400px){
+   .login-title{
+    font-size: 2.5em;
+   }
+   .login-wrap{
+    margin: auto;
+   }
+   .log-member{
+    width: 75%;
+   }
+   .login-form{
+    width: 52%;
+   }
+}
+@media screen and (max-width:1024px){
+  
+    .login-title{
+        font-size: 2.2em;
+       }
+       .log-member a{
+        width: 40%;
+        height: 50px;
+        font-size: 1em ;
+       }
+       .login-form{
+        width: 60%;
+       }
+.id,
+.pass,
+.name,.book,
+.phone,.check{
+    height: 50px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+input[name=id],
+input[name=psw],
+input[name=name],input[name=book],
+input[name=tel]{
+    font-size: 1em;
+}
+
+
+input[id=chk]+label{
+    width: 20px;
+    height: 20px;
+}  
+  
+   input[name=login-bt],input[name=book-bt]{
+    height: 50px;
+    font-size: 1.1em;
+    margin-top: 0;
+   }
+   input[name=book-bt]{
+    font-size: 0.9em;
+   }
+   .bt-group a{
+    font-size: 0.9em;
+   }
+   .login-form button{
+    height: 50px;
+    margin-left: 0;
+}
+}
+
+ @media screen and (max-width:800px){
+    .login-title{
+        font-size: 2em;
+        margin-top: 120px;
+        margin-bottom: 100px;
+       }
+
+       .log-member a{
+        width: 85%;
+        height: 50px;
+        font-size: 1em ;
+       }
+       .login-form{
+        width: 75%;
+        margin-bottom: 150px;
+       }
+.id,
+.pass,
+.name,.book,
+.phone,.check{
+    height: 45px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+input[name=id],
+input[name=psw],
+input[name=name],input[name=book],
+input[name=tel]{
+    font-size: 0.9em;
+}
+
+
+input[id=chk]+label{
+    width: 20px;
+    height: 20px;
+}  
+  
+   input[name=login-bt],input[name=book-bt]{
+    height: 50px;
+    font-size: 1em;
+    margin-top: 0;
+   }
+   input[name=book-bt]{
+    font-size: 1em;
+   }
+   .bt-group{
+    margin-bottom: 20px;
+   }
+   .bt-group a{
+    font-size: 0.85em;
+    padding: 0 6%;
+   }
+   .login-form button{
+    height: 45px;
+    margin-left: 0;
+}
+.p-info p{
+    font-size:0.9em;
+}
+ }
+@media screen and (max-width:650px){
+    .login-title{
+        font-size: 1.8em;
+        margin-top: 100px;
+        margin-bottom: 80px;
+       }
+       .log-member{
+        width: 85%;
+        margin-bottom: 15px;
+       }
+       .log-member a{
+        height: 40px;
+        font-size: 0.9em ;
+       }
+       .login-form{
+        width: 85%;
+        margin-bottom: 130px;
+       }
+.id,
+.pass,
+.name,.book,
+.phone,.check{
+    height: 40px;
+}
+input[name=id],
+input[name=psw],
+input[name=name],input[name=book],
+input[name=tel]{
+    font-size: 0.85em;
+}
+
+
+input[id=chk]+label{
+    width: 20px;
+    height: 20px;
+}  
+.check{
+    font-size:0.9em;
+}
+   input[name=login-bt],input[name=book-bt]{
+    height: 40px;
+    font-size: 1em;
+    margin-top: 0;
+   }
+   input[name=book-bt]{
+    font-size: 0.9em;
+   }
+   .bt-group{
+    margin-bottom: 20px;
+   }
+   .bt-group a{
+    font-size: 0.85em;
+    margin: 0;
+    padding-left: 0;
+    padding-right:6%;
+   }
+   .login-form button{
+    height: 45px;
+    margin-left: 0;
+}
+.p-info p{
+    font-size: 0.8em;
+}
+}
+@media screen and (max-width:450px){
+.login-title{
+    font-size: 1.6em;
+    }
+
+ .log-member a{
+    width: 85%;
+    font-size: 0.8em ;
+    }
+
+.id,
+.pass,
+.name,.book,
+.phone,.check{
+    height: 40px;
+}
+
+input[name=id],
+input[name=psw],
+input[name=name],input[name=book],
+input[name=tel]{
+    font-size: 0.8em;
+}
+
+.bt-group a{
+    font-size: 0.75em;
+    font-weight: 200;
+}
+.login-form button{
+    height: 40px;
+}
+.p-info p{
+    font-size: 0.7em;
+    margin: 10px 0;
+}
+   
+}

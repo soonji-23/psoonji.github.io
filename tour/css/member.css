@@ -1,0 +1,294 @@
+@charset "utf=8";
+hr{
+    border-color:rgba(243, 242, 242, 0.555); 
+ }
+.member-title{
+    font-size: 3em;
+    margin-top: 200px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.member-line{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.member-line h3{
+    font-size: 1.2em;
+    text-align: center;
+    color:rgb(41, 92, 112);
+    margin: auto;
+    width: 40%;
+    height: 80px;
+    padding-top: 10px;
+    margin-bottom: -25px;
+}
+
+.member-wrap{
+    width: 35%;
+    /* border: 1px solid black; */
+    margin: 50px auto;
+}
+.member-wrap>div{
+    width: 100%;
+    height:60px;
+}
+
+.id,
+.psw,.name,email{
+    width: 100%;
+    height: 60px;
+    margin: 15px 0;
+}
+.phone,.birth{
+    width: 100%;
+    height: 60px;
+    margin: 15px 0;
+}
+input{
+    outline: none;
+}
+input[name=id],
+input[type=password],
+input[name=name]{
+    width: 100%;
+    height: 100%;
+    /* border: none; */
+    padding:10px ;
+    font-size: 1.2em;
+}
+.email{
+    display: flex;
+    justify-content: space-between;
+}
+input[name=e-id],
+input[name=e-add],
+.e-select{
+    width: 32%;
+    font-size: 1.2em;
+    padding: 10px;
+    vertical-align: middle;
+}
+.email span{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+input[name=tel],input[name=birth]{
+    width:70%;
+    height: 100%;
+     /* border: none; */
+     padding:10px ;
+     font-size: 1.2em;
+}
+input[name=submit]{
+    width: 28%;
+    height: 100%;
+    border: none;
+    padding:10px ;
+    font-size: 1.1em;
+    font-weight: bold;
+     background-color: rgb(90, 90, 90); 
+    color:white;
+}
+.gender{
+    width: 30%;
+    height: 100%;
+    margin-left:73%;
+    margin-top: -40px;
+    font-size: 1.2em;
+
+}
+input[type=radio]{
+   width: 20px;
+   height: 20px;
+   appearance: none;
+   border-radius: 50%;
+   border: 2px solid rgb(92, 92, 92);
+}
+input[type=radio]:checked{
+    background:url(../images/iball.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}
+.check-box{
+    width:100%;
+    height:170px !important;
+    border: 1px solid grey;
+    margin-top:20px;
+}
+.check-box p{
+    padding-left: 10px;
+}
+.check-box 
+
+input[id=chk]+label,
+input[id=chk1]+label,
+input[id=chk2]+label,
+input[id=chk3]+label{
+    margin-right: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(92, 92, 92);
+    border-radius: 50%;
+    vertical-align: middle;
+    
+}
+input[id=chk]:checked+label,
+input[id=chk1]:checked+label,
+input[id=chk2]:checked+label,
+input[id=chk3]:checked+label{
+    background:url(../images/iball.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+input[type=checkbox]{
+    display: none;
+    }
+.trans{
+    margin-top:50px;
+    margin-bottom: 200px;
+}
+.trans input[type=submit]{
+border: none;  
+background-color: black;
+color: white;
+width: 100%;
+height: 100%;
+font-size: 1.2em;
+font-weight: bold;
+cursor: pointer;
+}
+@media screen and (max-width:1600px) {
+    .member-wrap{
+        width:40%;
+    }
+}
+
+@media screen and (max-width:1400px){
+    .member-wrap{
+        width:50%;
+       
+    }
+    .member-wrap>div{
+        font-size:0.9em;
+    }
+    .member-title{
+        font-size: 2.6em;
+    }
+}
+@media screen and (max-width:1200px) {
+}
+@media screen and (max-width:1024px) {
+.member-title{
+    margin-top: 150px;
+    margin-bottom: 30px;
+    font-size:2.2em;
+}
+.member-wrap{
+    width:65%;
+    margin-top: 40px;
+
+}
+h3{
+    display: none;
+}
+}
+@media screen and (max-width:800px){
+    .member-title{
+        margin-top: 120px;
+        font-size:2em;
+    }
+    .member-wrap{
+        width:75%;
+        margin-bottom: 150px;
+    }
+    .member-wrap>div{
+        font-size: 0.8em;
+    }
+    .gender{
+        flex-wrap: wrap;
+        width: 17%;
+        /* justify-content: center;
+        align-items: center; */
+        margin-top:-60px;
+        padding: 1%;
+        font-size: 1.1em;
+    }
+    input[type=radio]{
+        vertical-align:text-bottom;
+    }
+    .trans{
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width:650px){
+    .member-title{
+        font-size:1.5em;
+    }
+    .member-wrap{
+        width:75%;
+       margin-bottom: 120px;
+    }
+    .member-wrap>div{
+        height: 45px;
+        font-size: 0.75em;
+    }
+    .gender{
+    font-size:1em;
+    margin-top:-50px;
+    padding-right: 3.8%;
+    width:20%;
+    }
+    input[type=radio]{
+        width:15px;
+        height: 15px;
+    }
+    .check-box{
+     height:140px !important;
+    }
+    .check-box
+input[id=chk]+label,
+input[id=chk1]+label,
+input[id=chk2]+label,
+input[id=chk3]+label{
+    width: 15px;
+    height: 15px;
+}
+.trans{
+    margin-top:30px;
+}
+
+}
+
+@media screen and (max-width:450px){
+    .member-title{
+        font-size:1.3em;
+        margin-top: 90px;
+        margin-bottom: 0;
+    }
+    .member-wrap{
+        width:75%;
+       margin-bottom: 100px;
+    }
+    .member-wrap>div{
+        height: 40px;
+        font-size: 0.65em;
+    }
+    .gender{
+        margin-top:-45px;
+        padding-right: 3.8%;
+        width:20%;
+        }
+   
+    .check-box{
+        height:120px !important;
+       }
+}
+
