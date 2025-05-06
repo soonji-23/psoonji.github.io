@@ -267,17 +267,13 @@ index-footer p{
       margin: 0;
     }
   }
-/* 기본 상태: 모바일 이미지 숨기고, 비디오 보이게 */
-.bg-video {
-  display: block;
-}
 .mobile-image {
   display: none;
-  width: 100%;
-  height: auto;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
-/* 화면 너비가 768px 이하일 때 (모바일) */
 @media screen and (max-width: 768px) {
   .bg-video {
     display: none;
