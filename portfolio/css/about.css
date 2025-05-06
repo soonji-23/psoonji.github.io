@@ -140,11 +140,13 @@ section{
 } 
 @media screen and (max-width: 768px) {
   .photo img {
-    width: 80%;
-    height: auto;
+    width: 80% !important;
+    height: auto !important;
     display: block;
     margin: 0 auto;
+    object-fit: contain !important;
   }
 }
+
 
 
