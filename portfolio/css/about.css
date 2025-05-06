@@ -140,7 +140,7 @@ section{
 } 
 @media screen and (max-width: 768px) {
   .photo img {
-    width: 80% !important;
+    width: 90% !important;
     height: auto !important;
     display: block;
     margin: 0 auto;
