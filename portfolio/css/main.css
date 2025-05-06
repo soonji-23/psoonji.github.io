@@ -267,6 +267,24 @@ index-footer p{
       margin: 0;
     }
   }
+/* PC, 모바일 전용 요소 제어 */
+.pc-only,
+.mobile-only {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .pc-only {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+}
+
   
   
   
