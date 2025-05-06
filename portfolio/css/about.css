@@ -138,15 +138,7 @@ section{
     }
      
 } 
-@media screen and (max-width: 768px) {
-  .photo img {
-    width: 95% !important;
-    height: auto !important;
-    display: block;
-     margin: 0 auto 10px auto;
-    object-fit: contain !important;
-  }
-}
+
 
 
 
