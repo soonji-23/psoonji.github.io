@@ -100,5 +100,19 @@ $(document).ready(function(){
         $height();
         wheel();
     })
-      
+    var video = document.querySelector("video");
+    if (video) {
+        var playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(function(error) {
+                console.log("자동재생 실패, 수동 재생 시도 중:", error);
+                video.muted = true;
+                video.play().then(() => {
+                    console.log("수동 재생 성공");
+                }).catch((err) => {
+                    console.log("수동 재생도 실패:", err);
+                });
+            });
+        }
+    }    
 })
