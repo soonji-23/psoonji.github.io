@@ -282,14 +282,7 @@ index-footer p{
     display: block;
   }
 }
-@media screen and (max-width: 768px) {
-  .about img {
-    width: 80%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-}
+
 
 
   
